@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-charcoal-gray);
+    font-family: roboto, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+h1{
+    color: var(--color-dark-gray);
+}
+
+:root {
+
+    /* colors */
+    --color-tomato: hsl(4, 100%, 67%);
+    --color-dark-gray: hsl(234, 29%, 20%);
+    --color-charcoal-gray: hsl(235, 18%, 26%);
+    --color-gray: hsl(231, 7%, 60%);
+    --color-white: hsl(0, 0%, 100%);
+
+    /* Fluid space calculator - Thanks to utopia.fyi */
+
+    --space-3xs-2xs: clamp(0.31rem, calc(0.20rem + 0.54vw), 0.63rem);
+    --space-2xs-xs: clamp(0.56rem, calc(0.43rem + 0.65vw), 0.94rem);
+    --space-xs-s: clamp(0.88rem, calc(0.74rem + 0.65vw), 1.25rem);
+    --space-s-m: clamp(1.13rem, calc(0.86rem + 1.30vw), 1.88rem);
+    --space-m-l: clamp(1.69rem, calc(1.40rem + 1.41vw), 2.50rem);
+    --space-l-xl: clamp(2.25rem, calc(1.73rem + 2.61vw), 3.75rem);
+    --space-xl-2xl: clamp(3.38rem, calc(2.81rem + 2.83vw), 5.00rem);
+    --space-2xl-3xl: clamp(4.50rem, calc(3.46rem + 5.22vw), 7.50rem);
+}
+
+.card{
+    background-color: var(--color-white);
+    margin: 0px;
+    padding: var(--space-xs-s);
+    border-radius: 4vh;
+    display: flex;
+    flex-direction: row;
+    
+    box-shadow: 0 10px 50px 10px var(--color-dark-gray);
+}
+
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.image img{
+    width: 30%;
+}
+
+.container{
+    display: grid;
+}
