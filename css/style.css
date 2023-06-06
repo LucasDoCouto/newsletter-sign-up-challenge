@@ -43,25 +43,33 @@ h1{
     background-color: var(--color-white);
     margin: 0px;
     padding: var(--space-xs-s);
-    border-radius: 4vh;
+    margin: var(--space-m-l);
+    border-radius: 2vh;
     display: flex;
     flex-direction: row;
-    
     box-shadow: 0 10px 50px 10px var(--color-dark-gray);
+    width: 170vh;
+    height: auto;
 }
 
 .image{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-end;
     margin: 0;
     padding: 0;
+    /* background-color: aqua; TODO: remove */
+    height: auto;
 }
 
 .image img{
-    width: 30%;
+    width: 100%;
+    height: auto;
 }
 
 .container{
     display: grid;
+    width: auto;
+    height: auto;
+    margin: var(--space-xl-2xl);
 }
