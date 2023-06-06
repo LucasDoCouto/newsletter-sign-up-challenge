@@ -41,35 +41,26 @@ h1{
 
 .card{
     background-color: var(--color-white);
-    margin: 0px;
     padding: var(--space-xs-s);
-    margin: var(--space-m-l);
-    border-radius: 2vh;
+    border-radius: 3vh;
     display: flex;
-    flex-direction: row;
     box-shadow: 0 10px 50px 10px var(--color-dark-gray);
-    width: 170vh;
-    height: auto;
+    width: 800px;
+    gap: var(--space-s-m);
 }
 
-.image{
+.right{
+    width: 40%;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    margin: 0;
-    padding: 0;
-    /* background-color: aqua; TODO: remove */
-    height: auto;
+    align-items: center;
+    place-items: center;
+    justify-content: center;
 }
 
-.image img{
+.right img{
     width: 100%;
-    height: auto;
 }
 
-.container{
-    display: grid;
-    width: auto;
-    height: auto;
-    margin: var(--space-xl-2xl);
+.left{
+    width: 60%;
 }
