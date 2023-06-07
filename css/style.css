@@ -64,3 +64,7 @@ h1{
 .left{
     width: 60%;
 }
+
+ul{
+    list-style-image: url(/assets/images/icon-list.svg);
+}
