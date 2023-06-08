@@ -118,3 +118,9 @@ ul{
     border-radius: .8vh;
     width: 100%;
 }
+
+.btn-send:hover{
+    background-color: var(--color-tomato);
+    box-shadow: 0 3px 10px 2px var(--color-tomato);
+    transition: 0.2s;
+}
