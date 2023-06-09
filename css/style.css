@@ -28,6 +28,7 @@ p{
 
     /* colors */
     --color-tomato: hsl(4, 100%, 67%);
+    --color-pink: hsl(347, 99%, 66%);
     --color-dark-gray: hsl(234, 29%, 20%);
     --color-charcoal-gray: hsl(235, 18%, 26%);
     --color-gray: hsl(231, 7%, 60%);
@@ -102,7 +103,7 @@ ul{
 }
 
 .email-form{
-    padding: 1.4vh var(--space-m-l);
+    padding: var(--space-2xs-xs) var(--space-m-l);
     margin-top: .5vh;
     border: 1px solid var(--color-gray);
     width: 100%;
@@ -112,15 +113,15 @@ ul{
 .btn-send{
     background-color: var(--color-dark-gray);
     color: var(--color-white);
-    padding: 1.4vh var(--space-m-l);
-    margin-top: 2vh;
+    padding: var(--space-2xs-xs) var(--space-m-l);
+    margin-top: var(--space-xs-s);
     border: none;
     border-radius: .8vh;
     width: 100%;
 }
 
 .btn-send:hover{
-    background-color: var(--color-tomato);
-    box-shadow: 0 3px 10px 2px var(--color-tomato);
+    background-image: linear-gradient(to right, var(--color-pink), var(--color-tomato));
+    box-shadow: 0 7px 25px 2px  hsla(4, 100%, 67%, 0.657);
     transition: 0.2s;
 }
