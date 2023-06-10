@@ -32,6 +32,10 @@ p{
         width: auto;
         height: auto;
     }
+
+    h1 {
+        font-size: 40px;
+    }
 }
 
 :root {
@@ -87,6 +91,7 @@ p{
         border-radius: 0;
         flex-direction: column-reverse;
         place-items: flex-start;
+        justify-content: start;
         box-shadow: none;
     }
 }
@@ -222,4 +227,46 @@ li::before{
 
 .invisible{
     display: none;
+}
+
+@media screen and (max-width: 822px){
+    .card-confirm{
+        border-radius: 0;
+        width: 100%;
+        height: 100vh;
+    }
+    .card-confirm-container{
+        justify-content: start;
+    }
+}
+
+/* Footer */
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    margin: var(--space-2xs-xs) 0;
+  }
+
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    text-decoration: underline; 
+    color: white; 
+}
+
+@media screen and (max-width: 822px){
+    .attribution {
+        color: var(--color-dark-gray);
+    }
+    .attribution a{
+        color: var(--color-dark-gray);
+    }
 }
