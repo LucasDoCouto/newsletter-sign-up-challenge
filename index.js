@@ -1,4 +1,9 @@
 const sendButton = document.querySelector(".btn-send")
+const backButton = document.querySelector(".btn-back")
+const firstCardElement = document.querySelector("#card1")
+const secondCardElement = document.querySelector("#card2")
+
+
 
 function validacaoEmail(x) {
     usuario = x.substring(0, x.indexOf("@"));
@@ -12,11 +17,26 @@ function validacaoEmail(x) {
         (dominio.search(".")!=-1) &&
         (dominio.indexOf(".") >=1)&&
         (dominio.lastIndexOf(".") < dominio.length - 1)) {
-    alert("E-mail válido");
-    }
+        
+        if (firstCardElement.classList) firstCardElement.classList.add("invisible");
+        else firstCardElement.className += " invisible";
+
+        if (secondCardElement.classList) secondCardElement.classList.remove("invisible");
+        else secondCardElement.className -= " invisible";
+
+
+        }
     else{
     alert("E-mail inválido");
     }
+}
+
+function voltar(){
+    if (firstCardElement.classList) firstCardElement.classList.remove("invisible");
+    else firstCardElement.className -= " invisible";
+
+    if (secondCardElement.classList) secondCardElement.classList.add("invisible");
+    else secondCardElement.className += " invisible";
 }
 
 // Executa a validação de e-mail quando o usuário aperta enter
@@ -29,7 +49,6 @@ function readInput(el, e) {
     if (e.keyCode == 13) {
       validacaoEmail(email)
     }
-    
 }
 
 // Executa a validação do e-mail quando o usuário pressiona o botão
@@ -38,10 +57,10 @@ sendButton.addEventListener("click",function(){
     var input = document.querySelector(".email-form")
     var email = input.value
     validacaoEmail(email)
-
-//   const isExpanded = JSON.parse(menuButton.getAttribute("aria-expanded"));
-//   console.log(isExpanded);
-//   menuButton.setAttribute("aria-expanded", !isExpanded)
 })
 
+// Volta para a página inicial ao pressionar o botão
 
+backButton.addEventListener("click",function(){
+    voltar()
+})

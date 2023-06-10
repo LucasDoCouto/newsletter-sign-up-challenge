@@ -20,6 +20,7 @@ h1{
     margin-bottom: var(--space-xs-s);
 }
 
+
 p{
     color: var(--color-dark-gray);
     font-size: 16px;
@@ -141,7 +142,7 @@ li::before{
     border: 1px solid var(--color-dark-gray);
 }
 
-.btn-send{
+.btn-style{
     background-color: var(--color-dark-gray);
     color: var(--color-white);
     padding: var(--space-2xs-xs) var(--space-m-l);
@@ -152,7 +153,7 @@ li::before{
     transition: 0.3s;
 }
 
-.btn-send:hover{
+.btn-style:hover{
     background-image: linear-gradient(to right, var(--color-pink), var(--color-tomato));
     box-shadow: 0 13px 20px 2px  hsla(4, 100%, 67%, 0.509);
     transition: 0.3s;
@@ -184,4 +185,41 @@ li::before{
     .right img{
         content: url("/assets/images/illustration-sign-up-mobile.svg");
     }
+}
+
+/* Card de confirmação de inscrição */
+
+.card-confirm{
+    width: 504px;
+    height: 519px;
+    background-color: var(--color-white);
+    padding: 0;
+    margin: 0;
+    border-radius: 37px;
+    display: flex;
+    box-shadow: 0 10px 50px 10px var(--color-dark-gray);
+    gap: var(--space-s-m);
+}
+
+.card-confirm-container{
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-l-xl);
+    justify-content: center;
+}
+
+.card-confirm-container img{
+    width: 65px;
+}
+
+.card-confirm-container h1{
+    margin-top: var(--space-s-m);
+}
+
+.card-confirm-container button{
+    margin-top: var(--space-m-l);
+}
+
+.invisible{
+    display: none;
 }

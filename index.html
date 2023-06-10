@@ -24,7 +24,7 @@
 
   <!-- Sign-up form start -->
 
-  <div class="card">
+  <div class="card" id="card1">
     <div class="left">
       <div class="left-container">
         <h1>Stay updated!</h1>
@@ -39,10 +39,8 @@
       
     
       <p class="email-title">Email address</p>
-      <form name="f1">
         <input type="text" name="email" onkeypress="readInput(this, event)" class="email-form" placeholder="email@company.com">
-      </form>
-      <button class="btn-send" >Subscribe to monthly newsletter</button>
+      <button class="btn-send btn-style" >Subscribe to monthly newsletter</button>
       </div>
     </div>
       <div class="right">
@@ -55,12 +53,17 @@
 
   <!-- Success message start -->
 
-  <!-- Thanks for subscribing!
+  <div class="card-confirm invisible" id="card2">
+    <div class="card-confirm-container">
+      <img src="/assets/images/icon-success.svg">
 
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
+      <h1>Thanks for subscribing!</h1> 
 
-  Dismiss message -->
+      <p>A confirmation email has been sent to <b>ash@loremcompany.com</b>.
+      Please open it and click the button inside to confirm your subscription.</p> 
+      <button class="btn-back btn-style">Dismiss message</button>
+    </div>
+  </div>
 
   <!-- Success message end -->
   
