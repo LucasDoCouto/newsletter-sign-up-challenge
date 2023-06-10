@@ -93,14 +93,27 @@ p{
 }
 
 ul{
-    list-style-image: url(/assets/images/icon-list.svg);
+    /* list-style-image: url(/assets/images/icon-list.svg); */
+    list-style: none;
     list-style-position: inside;
     margin: var(--space-2xs-xs) 0 var(--space-s-m) 0;
+    line-height: 21px;
 }
 
 li{
     margin: var(--space-2xs-xs) 0;
     font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+
+li::before{
+    content: url(/assets/images/icon-list.svg);
+    margin-right: var(--space-2xs-xs);
+    max-width: 21px;
+    max-height: 21px;
 }
 
 .email-title{
