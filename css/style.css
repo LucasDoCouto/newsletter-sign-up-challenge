@@ -25,6 +25,14 @@ p{
     font-size: 16px;
 }
 
+@media screen and (max-width: 822px){
+    body{
+        background-color: var(--color-white);
+        width: auto;
+        height: auto;
+    }
+}
+
 :root {
 
     /* colors */
@@ -47,6 +55,8 @@ p{
     --space-2xl-3xl: clamp(4.50rem, calc(3.46rem + 5.22vw), 7.50rem);
 }
 
+/* Card Principal */
+
 .card{
     background-color: var(--color-white);
     padding: var(--space-xs-s);
@@ -58,34 +68,29 @@ p{
     gap: var(--space-s-m);
 }
 
-@media screen and (max-width: 822px){
-    .card{
-        width: 100%;
-        height: 100vh;
-        margin: 0;
-        border-radius: 0;
-        flex-direction: column-reverse;
-    }
-}
-
-.right{
-    width: 400px;
-    display: flex;
-    align-items: center;
-    place-items: center;
-    justify-content: center;
-}
-
-.right img{
-    width: 100%;
-}
-
 .left{
     width: auto;
     margin: 45px var(--space-m-l);
     display: flex;
     align-items: center;
 }
+
+/* Aplica estilos mobile no Card Principal */
+
+@media screen and (max-width: 822px){
+    .card{
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        flex-direction: column-reverse;
+        place-items: flex-start;
+        box-shadow: none;
+    }
+}
+
+/* Lado Esquerdo Card Principal */
 
 .left-container{
     display: flex;
@@ -152,4 +157,31 @@ li::before{
     box-shadow: 0 13px 20px 2px  hsla(4, 100%, 67%, 0.509);
     transition: 0.3s;
     cursor: pointer;
+}
+
+/* Lado Direito Card Principal */
+
+
+.right{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    place-items: center;
+    justify-content: center;
+}
+
+.right img{
+    width: 100%;
+}
+
+@media screen and (max-width: 822px){
+    .right{
+        width: 100%;
+        align-items: start;
+        place-items: start;
+        justify-content: start;
+    }
+    .right img{
+        content: url("/assets/images/illustration-sign-up-mobile.svg");
+    }
 }
