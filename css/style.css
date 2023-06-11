@@ -93,6 +93,7 @@ p{
         place-items: flex-start;
         justify-content: start;
         box-shadow: none;
+        gap: 0;
     }
 }
 
