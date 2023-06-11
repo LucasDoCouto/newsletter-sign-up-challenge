@@ -2,8 +2,9 @@ const sendButton = document.querySelector(".btn-send")
 const backButton = document.querySelector(".btn-back")
 const firstCardElement = document.querySelector("#card1")
 const secondCardElement = document.querySelector("#card2")
+const emailForm = document.querySelector("#email-form")
 
-
+// função que valida o email
 
 function validacaoEmail(x) {
     usuario = x.substring(0, x.indexOf("@"));
@@ -24,12 +25,45 @@ function validacaoEmail(x) {
         if (secondCardElement.classList) secondCardElement.classList.remove("invisible");
         else secondCardElement.className -= " invisible";
 
+        if (emailForm.classList) emailForm.classList.remove("form-warning");
+        else emailForm.className -= " form-warning";
+
 
         }
     else{
-    alert("E-mail inválido");
+        if (emailForm.classList) emailForm.classList.add("form-warning");
+        else emailForm.className += " form-warning";
     }
 }
+
+// Função que remove a cor vermelha caso o email digitado esteja correto
+
+function validacorEmail() {
+    var input = document.querySelector(".email-form")
+    var email = input.value
+    usuario = email.substring(0, email.indexOf("@"));
+    dominio = email.substring(email.indexOf("@")+ 1, email.length);
+    if ((usuario.length >=1) &&
+        (dominio.length >=3) &&
+        (usuario.search("@")==-1) &&
+        (dominio.search("@")==-1) &&
+        (usuario.search(" ")==-1) &&
+        (dominio.search(" ")==-1) &&
+        (dominio.search(".")!=-1) &&
+        (dominio.indexOf(".") >=1)&&
+        (dominio.lastIndexOf(".") < dominio.length - 1)) {
+
+        if (emailForm.classList) emailForm.classList.remove("form-warning");
+        else emailForm.className -= " form-warning";
+
+        }
+    else{
+        if (emailForm.classList) emailForm.classList.add("form-warning");
+        else emailForm.className += " form-warning";
+    }
+}
+
+// Função que volta para a página inicial
 
 function voltar(){
     if (firstCardElement.classList) firstCardElement.classList.remove("invisible");
@@ -40,7 +74,6 @@ function voltar(){
 }
 
 // Executa a validação de e-mail quando o usuário aperta enter
-// TODO: Desabilitar envio automatico do formulário após a execução do script
 
 function readInput(el, e) {
     var input = document.querySelector(".email-form")
